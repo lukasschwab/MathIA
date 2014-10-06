@@ -5,7 +5,7 @@ from unidecode import unidecode
 # Otherwise, just the numbers resulting from analysis
 
 # Randomly select a node
-nodeno = lineno = random.randint(1,5706070)
+lineno = random.randint(1,5706070)
 
 # Gather its info
 linestr = linecache.getline('links-simple-sorted.txt',lineno)
@@ -15,7 +15,7 @@ dest = dest.split(' ')
 dest[:] = [int(x) for x in dest]
 
 # Gather the same info for each of the neighbors
-
+# Indexed by twoSteps[neighborIndex1][neigborIndex2]
 twoSteps = [None] * len(dest)
 counter = 0
 for neighbor in dest:
@@ -29,3 +29,14 @@ for neighbor in dest:
 
 print 'Node analyzed: ' + origin
 print 'Connectivity: ' + str(len(dest))
+
+# CLUSTERING COEFFICIENT
+ai = len(dest)
+Ei = float(0)
+# Nested loop to be able to check links between neighbors
+for x in twoSteps:
+	tris = list(set(x) & set(dest)) # Network triangles
+	Ei += len(tris)
+# Calculate the coefficient
+clCoeff = (2*Ei)/(ai*(ai-1))
+print 'Clustering Coefficient: ' + str(clCoeff)
