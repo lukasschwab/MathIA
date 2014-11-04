@@ -1,5 +1,5 @@
 
-with open('links-data-improved.txt', 'r') as src:
+with open('links-simple-sorted.txt', 'r') as src:
 	with open('links-data-improved.txt', 'w') as dest:
 		lineno = 1
 		noCorrected = 0
