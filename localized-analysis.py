@@ -13,6 +13,7 @@ with open('links-simple-sorted.txt', 'r') as src:
 
 # Randomly select a node
 oNode = random.randint(1,5716809)
+oname = linecache.getline('titles-sorted.txt',int(oNode))
 dNode = finallist[oNode].split(' ')
 
 # Gather the same info for each of the neighbors
@@ -27,9 +28,11 @@ oneANDtwo = 0
 for firstStep in dNode:
 	oneANDtwo += twoSteps.count(firstStep)
 
-print 'Node analyzed: ' + str(oNode)
+print ''
+print 'Node analyzed: ' + str(oNode) + ': ' + oname[:-1]
 print 'Connectivity: ' + str(len(dNode))
 print 'Two-step connectivity: ' + str(len(twoSteps))
+
 
 if len(dNode) > 1:
 	# CLUSTERING COEFFICIENT
@@ -38,3 +41,5 @@ if len(dNode) > 1:
 	# Calculate the coefficient
 	clCoeff = (2*Ei)/(ai*(ai-1))
 	print 'Clustering Coefficient: ' + str(clCoeff)
+
+print ''
