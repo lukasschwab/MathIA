@@ -19,4 +19,3 @@ Dataset thanks to [Henry Haselgrove](http://haselgrove.id.au/wikipedia.htm)â€“â€
 + Debug clustering coefficient calculation; returns values greater than 1, which should be maximum value. Current thought: some edges will be counted twice if two neighbors both link to the other, but not all edges will be counted twice (the link does not report inlinks).
 + Add large-scale clustering coefficient (list, average) to analysis.py
 + Run analytics in a list without any redirects (single outgoing link)
-+ How to call functions in other scripts? Is it doable. 

@@ -1,6 +1,7 @@
 import random
 import linecache
 from unidecode import unidecode
+from localized_analysis import clCoeff
 
 # Process links into list
 finallist = [None] * 5716809
@@ -39,6 +40,9 @@ for node in finallist:
 	else:
 		linksout += [0]
 avgConn = float(totalConn/5716809)
-print avgConn # Average outgoing connectivity
-print max(linksout) # Maximum number of links
-print totalConn # Total number of links in dataset
+
+##########################################################################################
+# Clustering coefficient for every node
+
+for node in range (1,5716810):
+	print clCoeff(node, finallist)
