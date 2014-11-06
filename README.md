@@ -9,9 +9,9 @@ Dataset thanks to [Henry Haselgrove](http://haselgrove.id.au/wikipedia.htm)â€“â€
 
 ## File index
 
-+ *analysis.py* does big-scale analysis of the network (limited link-counting capability right now)
-+ *listmake.py* isn't actually commonly used, but may be used to pickle the links data once and for all. For now, just includes the stock data-to-list code that I'm copying and pasting everywhere because fisi
-+ *localized-analysis.py* does analysis on a randomly selected node, including the calculation of the clustering coefficient.
++ `analysis.py` does big-scale analysis of the network (limited link-counting capability right now)
++ `listmake.py` isn't actually commonly used, but may be used to pickle the links data once and for all. For now, just includes the stock data-to-list code that I'm copying and pasting everywhere because fisi
++ `localized-analysis.py` does analysis on a randomly selected node, including the calculation of the clustering coefficient.
 
 
 ## To do list
