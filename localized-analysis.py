@@ -1,9 +1,6 @@
 import linecache, sys, random
 from unidecode import unidecode
 
-# I want a -l command to give the information on all the nodes involved
-# Otherwise, just the numbers resulting from analysis
-
 # Gather its info
 finallist = [None] * 5716809
 with open('links-simple-sorted.txt', 'r') as src:
