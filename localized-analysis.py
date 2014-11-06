@@ -37,7 +37,7 @@ if len(dNode) > 1:
 	Ei = float(oneANDtwo)
 	# Calculate the coefficient
 	# Links are often (not always) counted twice...
-	clCoeff = (2Ei)/(ai*(ai-1))
+	clCoeff = (2*Ei)/(ai*(ai-1))
 	print 'Clustering Coefficient: ' + str(clCoeff)
 
 print ''
