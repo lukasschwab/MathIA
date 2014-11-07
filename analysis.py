@@ -31,18 +31,19 @@ with open('links-simple-sorted.txt', 'r') as src:
 # Connectivity across the whole network
 
 # Calculate average number of 1st-order connections
-totalConn = 0
-linksout = []
-for node in finallist:
-	if type(node) != type(None): # If the oNode has outlinks
-		totalConn += len(node.split(' '))
-		linksout += [len(node.split(' '))]
-	else:
-		linksout += [0]
-avgConn = float(totalConn/5716809)
+# totalConn = 0
+# linksout = []
+# for node in finallist:
+# 	if type(node) != type(None): # If the oNode has outlinks
+# 		totalConn += len(node.split(' '))
+# 		linksout += [len(node.split(' '))]
+# 	else:
+# 		linksout += [0]
+# avgConn = float(totalConn/5716809)
 
 ##########################################################################################
 # Clustering coefficient for every node
 
 for node in range (1,5716810):
-	print clCoeff(node, finallist)
+	test = clCoeff(node, finallist)
+	print node

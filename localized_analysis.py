@@ -2,9 +2,10 @@ import linecache, sys, random
 from unidecode import unidecode
 
 def clCoeff(oNode, finallist):
-	oname = linecache.getline('titles-sorted.txt',int(oNode))
 	if type(finallist[oNode]) != type(None):
 		dNode = finallist[oNode].split(' ')
+	else:
+		return 0
 
 	# Gather the same info for each of the neighbors
 	# Make this a function, can do recursive calls to check multiple depths?
