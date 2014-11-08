@@ -30,3 +30,9 @@ def clCoeff(oNode, finallist):
 		return clCoeff
 	else:
 		return 0
+
+def getName(oNode):
+	oname = linecache.getline('titles-sorted.txt',int(oNode))[:-1]
+	return oname
+
+
