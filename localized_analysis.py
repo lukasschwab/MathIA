@@ -35,4 +35,8 @@ def getName(oNode):
 	oname = linecache.getline('titles-sorted.txt',int(oNode))[:-1]
 	return oname
 
-
+def getOutlinks(oNode, finallist):
+	dNode = finallist[oNode].split(' ')
+	namesList = []
+	for indexNo in dNode:
+		namesList += [linecache.getline('titles-sorted.txt',int(indexNo))[:-1]]
