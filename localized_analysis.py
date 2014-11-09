@@ -40,3 +40,4 @@ def getOutlinks(oNode, finallist):
 	namesList = []
 	for indexNo in dNode:
 		namesList += [linecache.getline('titles-sorted.txt',int(indexNo))[:-1]]
+	return [dNode, namesList]
