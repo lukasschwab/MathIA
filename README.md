@@ -18,4 +18,4 @@ Dataset thanks to [Henry Haselgrove](http://haselgrove.id.au/wikipedia.htm)–�
 
 + Debug clustering coefficient calculation; returns values greater than 1, which should be maximum value. Current thought: some edges will be counted twice if two neighbors both link to the other, but not all edges will be counted twice (the link does not report inlinks).
 + Add large-scale clustering coefficient (list, average) to analysis.py
-+ Parallel processing!
++ Parallel processing! This may not be an issue––maybe just look at a portion (every hundredth node?) in the dataset?
