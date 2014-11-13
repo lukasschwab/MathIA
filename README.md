@@ -10,7 +10,7 @@ Dataset thanks to [Henry Haselgrove](http://haselgrove.id.au/wikipedia.htm)â€“â€
 ## File index
 
 + `analysis.py` compiles the network into a list format and isolates the nodes for which it is possible to calculate a clustering coefficient (those with one link are ignored, and are very often redirect aliases anyway). It then calls functions defined in `localized_analysis.py` to evaluate those nodes. Currently, it calculates the clustering coefficient for every hundredth node.
-+ `listmake.py` isn't actually commonly used, but may be used to pickle the links data once and for all. For now, just includes the stock data-to-list code that I'm copying and pasting everywhere because fisi
++ `listmake.py` isn't actually commonly used, but may be used to pickle the links data once and for all. For now, just includes the stock data-to-list code that I'm copying and pasting everywhere because F.I.S.I.
 + `localized_analysis.py` defines analysis at the micro level. Currently it includes several functions...
     + `clCoeff(oNode, finallist)` calculates the clustering coefficient for a given node. Currently it considers redirect alias nodes a part of the calculation, though perhaps at some point they should be excluded from 'finallist' somehow.
     + `getName(oNode)` gets the name of a node with ID `oNode` by pulling it from titles-sorted.txt.
